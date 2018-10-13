@@ -9,19 +9,25 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { HeroesService } from './services/heroes.service';
+import { HeroeDetailComponent } from './components/heroe-detail/heroe-detail.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
     AboutComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroeDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    HeroesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
